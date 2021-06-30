@@ -33,9 +33,20 @@ $lang['Informations / Mentions légales'] = 'Informations / Mentions légales';
 $lang['Contacts'] = 'Contacts';
 
 /* Textes interface */
+$lang['Texte indroduction'] = '<p>Le Parc national du Mercantour s\'est lancé en 2015 dans un programme de capture et de marquage des bouquetins, 
+pour réaliser des études sérologiques, génétiques et mieux comprendre leurs déplacements. 
+Depuis, plus de 150 individus ont été capturés et certains ont été équipés de colliers GPS pour un temps limité. 
+En avril 2021, 19 bouquetins en provenance du Parc national de la Vanoise ont été relâchés dans le Mercantour pour apporter de la diversité génétique. 
+Suivez-les avec nous sur la carte ci-contre.</p>';
+$lang['Entete liste tracked_objects'] = '<strong>Cliquez sur le nom d\'un bouquetin pour voir son parcours</strong> <br>
+<strong>Cliccate sul nome di uno stambecco per vedere i suoi spostamenti</strong><br>
+ Pour les / Negli ultimi';
+$lang['Slide derniers jours'] = 'derniers jours / giorni';
+/*
 $lang['Texte indroduction'] = config::get('texte_introduction');
-$lang['Entete liste tracked_objects'] = '<strong>Cliquez sur le nom d\'un objet traqué pour voir son parcours</strong> <br /> Pour les';
+$lang['Entete liste tracked_objects'] = '<strong>Cliquez sur le nom d\'un bouquetin pour voir son parcours</strong> <br /> Pour les';
 $lang['Slide derniers jours'] = 'derniers jours.';
+*/
 $lang['Entete selection periode'] = '<strong>Sélectionnez la période de déplacement à afficher</strong>';
 $lang['Fermer'] = 'Fermer';
 
