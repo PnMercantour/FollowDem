@@ -35,7 +35,7 @@ $lang['Contacts'] = 'Contacts';
 /* Textes interface */
 $lang['Texte indroduction'] = '<p>Le Parc national du Mercantour s\'est lancé en 2015 dans un programme de capture et de marquage des bouquetins, 
 pour réaliser des études sérologiques, génétiques et mieux comprendre leurs déplacements. 
-Depuis, plus de 150 individus ont été capturés et certains ont été équipés de colliers GPS pour un temps limité. 
+Depuis, plus de 150 individus ont été capturés et certains ont été équipés de colliers GPS pour un temps limité.<br> 
 En avril 2021, 19 bouquetins en provenance du Parc national de la Vanoise ont été relâchés dans le Mercantour pour apporter de la diversité génétique. 
 Suivez-les avec nous sur la carte ci-contre.</p>';
 $lang['Entete liste tracked_objects'] = '<strong>Cliquez sur le nom d\'un bouquetin pour voir son parcours</strong> <br>
