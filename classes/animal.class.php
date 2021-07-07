@@ -12,6 +12,7 @@ class Animal
 
     protected 	$id_animal			= '';
     protected 	$name 			= '';
+    protected   $sex            = 'U';
     protected 	$birth_year 	= NULL;
     protected 	$capture_date	 	= NULL;
     protected 	$death_date 		= 0;
@@ -60,7 +61,15 @@ class Animal
         return $this->id_animal;
     }
 
+    public function getSex()
+    {
+        return $this->sex;
+    }
 
+    public function setSex($sex='U')
+    {
+        $this->sex=$sex;
+    }
 
     /* Renvoie tableau d'objet et de propriété */
     public function getAttributes()
@@ -145,12 +154,13 @@ class Animal
     {
 
         $db=db::get();
-        $rqs = $db->prepare('SELECT id_animal, name, birth_year, capture_date, death_date, comment FROM '.config::get('db_prefixe').'t_animals WHERE active = TRUE AND id_animal = ?');
+        $rqs = $db->prepare('SELECT id_animal, name, sex, birth_year, capture_date, death_date, comment FROM '.config::get('db_prefixe').'t_animals WHERE active = TRUE AND id_animal = ?');
         $rqs->execute(array($this->id_animal));
 
         if($results = $rqs->fetchObject())
         {
             $this->setName($results->name);
+            $this->setSex($results->sex);
             $this->setBirthYear($results->birth_year);
             $this->setCaptureDate($results->capture_date);
             $this->setDeathDate($results->death_date);
@@ -177,13 +187,14 @@ class Animal
         while($results = $rqs->fetchObject()) {
             $animal = new Animal($results->id_animal);
             $animal->setName($results->name);
+            $animal->setSex($results->sex);
             $animal->setBirthYear($results->birth_year);
             $animal->setCaptureDate($results->capture_date);
             $animal->setDeathDate($results->death_date);
 
             $animal->setAttributes(AnimalAttribute::load_all($animal->getIdAnimal()));
             $tmp_animals[] = $animal;
-}
+        }
         return $tmp_animals;
     }
     /*Charge les données de l'objet sur une période
